@@ -1,5 +1,5 @@
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 .sidenav {
   height: 100%;
@@ -11,6 +11,7 @@
   overflow-x: hidden; /* Disable horizontal scroll */
   background: white;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+  transition: 0.2s;
 }
 .sidebar-items{
 font-weight: 500px;
@@ -22,24 +23,25 @@ color: #171725;
 padding-left: 20px;
 }
 .under-order{
-    font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 27px;
-color: #969BA0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #969BA0;
 }
 .order{
-font-style: normal;
 font-weight: 600;
 font-size: 24px;
 line-height: 36px;
 /* identical to box height, or 150% */
 
 text-align: center;
-letter-spacing: 0.1px;
+/* letter-spacing: 0.1px; */
 
 color: #171725;
 }
+
+
 .c{
   color: #49Bc;
 }
@@ -68,13 +70,12 @@ color: #343434;
 }
 .orderbardiv{ 
 display: inline-flex;
-left: 20%;
-right: 5%;
 margin-top: 4%;
-height:120px;
+height: 120px;
 background: #3E4954;
 box-shadow: 0px 12px 33px rgba(62, 73, 84, 0.08);
 border-radius: 12px; 
+width: 100%;
 }
 
 .icon{
@@ -111,9 +112,8 @@ color: #171725;
 
 .mai {
   margin-top: 55px;
-  padding-top: 2%;
+  padding: 2%;
   margin-left:220px;
-  margin-right:20px;
   max-width:100%;
   overflow-x: hidden;
 }
@@ -165,7 +165,6 @@ line-height: 24px;
 }
 .top-buttons {
     display: flex;
-    margin-left: 500px;
 }
 /*.ft{
 margin-top: 1px;
@@ -220,3 +219,72 @@ line-height: 20px;
 .navbar{
    margin-left: 200px;
 }
+
+.toggle-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.toggle-icon span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background-color: black;
+  z-index: 1000;
+}
+
+
+/* Mobile/Tablet view.. */
+@media screen and (max-width: 900px) {
+
+  /* Side nav */
+  .sidenav {
+    width: 0px;
+  }
+
+  /* Top Nav  */
+  .navbar{
+     margin-left: 0px;
+     z-index: 1;
+  }
+
+
+  /* Main body */
+  .mai {
+    margin-left: 0px;
+  }
+
+  /* Button Container  */
+  .button-container {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 0px;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item {
+    height: unset;
+    width: unset;
+    padding: 8px ;
+    font-size: 14px;
+}
+
+.ft div:first-child {
+  display: none;
+}
+.toggle-icon {
+  display: block;
+}
+.imgstyle{
+  margin-top: 0;
+  margin-right: 0;
+  height: unset;
+}
+
+}
+
+
+
